@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>导演管理</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { margin-bottom: 15px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    button { margin-right: 8px; }
+    #directorForm { display: none; margin-top: 20px; padding: 10px; border: 1px solid #aaa; background: #f9f9f9; }
+  </style>
+</head>
+<body>
+  <h1>导演管理</h1>
+
+  <input type="search" id="searchInput" placeholder="搜索导演姓名" />
+  <button type="button" id="searchBtn">搜索</button>
+  <button type="button" id="refreshBtn">刷新列表</button>
+  <button type="button" id="addBtn">添加导演</button>
+
+  <table id="directorsTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>出生日期</th>
+        <th>参与电影</th> <!-- 新增显示列 -->
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="directorForm">
+    <h2 id="formTitle">添加导演</h2>
+    <label>姓名: <input type="text" id="nameInput" required /></label><br/><br/>
+    <label>出生日期: <input type="date" id="dobInput" /></label><br/><br/>
+    <label>参与电影:
+      <select id="moviesSelect" multiple></select>
+    </label><br/><br/>
+    <button type="button" id="saveBtn">保存</button>
+    <button type="button" id="cancelBtn">取消</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/directors.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+

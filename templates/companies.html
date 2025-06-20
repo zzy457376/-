@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>公司管理</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <h1>公司管理</h1>
+
+  <!-- 搜索框 -->
+  <input type="text" id="searchInput" placeholder="输入公司名称搜索" />
+  <button id="searchBtn">搜索</button>
+
+  <button id="refreshBtn">刷新列表</button>
+  <button id="addBtn">添加公司</button>
+
+  <table border="1" id="companiesTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>公司名称</th>
+        <th>城市</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="companyForm" style="display:none;">
+    <h2 id="formTitle">添加公司</h2>
+    <label>公司名称: <input type="text" id="nameInput" /></label><br/>
+    <label>城市: <input type="text" id="cityInput" /></label><br/>
+    <button id="saveBtn">保存</button>
+    <button id="cancelBtn">取消</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/companies.js') }}"></script>
+</body>
+</html>
+
+
+
+
+

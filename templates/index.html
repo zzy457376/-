@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>电影管理系统</title>
+</head>
+<body>
+    <h1>欢迎使用电影管理系统</h1>
+    <ul>
+        <li><a href="{{ url_for('actors.actors_page') }}">演员管理</a></li>
+        <li><a href="{{ url_for('companies.companies_page') }}">公司管理</a></li>
+        <li><a href="{{ url_for('directors.directors_page') }}">导演管理</a></li>
+        <li><a href="{{ url_for('genres.genres_page') }}">类型管理</a></li>
+        <li><a href="{{ url_for('movies.movies_page') }}">电影管理</a></li>
+        <li><a href="{{ url_for('roles.roles_page') }}">角色管理</a></li>
+        <li><a href="{{ url_for('narrations.narrations_page') }}">旁白管理</a></li>
+    </ul>
+</body>
+</html>
+
+
+
+
