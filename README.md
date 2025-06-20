@@ -54,8 +54,8 @@ def get_connection():
 def close_connection(conn):
     if conn.is_connected():
         conn.close()
-3. 测试数据
-目前暂无测试数据。如后续有 test_data.sql，可在此说明导入方式。
+3. 测试数据导入
+先用sql语句.sql建表，再用test_data.sql插入数据
 
 4. 项目运行步骤与使用方法
 (1) 安装依赖
@@ -126,6 +126,8 @@ README.md # 项目说明文件（本文件）
 郑致远	数据库语句、前后端代码
 高少萱	汇报 PPT 设计、项目文档撰写
 方潇砚	概念模型设计、项目文档撰写
+
+7.导出测试数据：movie_industry_dump.sql
 
 
 
