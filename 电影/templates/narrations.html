@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>旁白管理</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <h1>旁白管理</h1>
+
+  <!-- 搜索框 -->
+  <input type="text" id="searchInput" placeholder="输入旁白内容搜索" />
+  <button id="searchBtn">搜索</button>
+
+  <button id="refreshBtn">刷新列表</button>
+  <button id="addBtn">添加旁白</button>
+
+  <table border="1" id="narrationsTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>内容</th>
+        <th>演员</th>
+        <th>电影</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="narrationForm" style="display:none;">
+    <h2 id="formTitle">添加旁白</h2>
+    <label>内容:<br/>
+      <textarea id="contentInput" rows="4" cols="50"></textarea>
+    </label><br/>
+    <label>演员: 
+      <select id="actorSelect">
+        <option value="">请选择演员</option>
+      </select>
+    </label><br/>
+    <label>电影: 
+      <select id="movieSelect">
+        <option value="">请选择电影</option>
+      </select>
+    </label><br/>
+    <button id="saveBtn">保存</button>
+    <button id="cancelBtn">取消</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/narrations.js') }}"></script>
+</body>
+</html>
+
+

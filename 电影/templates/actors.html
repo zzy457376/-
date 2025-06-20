@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>演员管理</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <h1>演员管理</h1>
+
+  <!-- 搜索功能 -->
+  <input type="text" id="searchInput" placeholder="搜索演员姓名">
+  <button id="searchBtn">搜索</button>
+  <button id="refreshBtn">刷新列表</button>
+  <button id="addBtn">添加演员</button>
+
+  <table border="1" id="actorsTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>出生日期</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- 添加/编辑表单 -->
+  <div id="actorForm" style="display:none;">
+    <h2 id="formTitle">添加演员</h2>
+    <label>姓名: <input type="text" id="nameInput" /></label><br/>
+    <label>出生日期: <input type="date" id="dobInput" /></label><br/>
+    <button id="saveBtn">保存</button>
+    <button id="cancelBtn">取消</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/actors.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
